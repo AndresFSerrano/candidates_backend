@@ -109,10 +109,7 @@ export class CandidatesController {
   @ApiNotFoundResponse({
     description: 'Candidate not found',
   })
-  update(
-    @Param('id') id: string,
-    @Body() dto: UpdateCandidateDto,
-  ) {
+  update(@Param('id') id: string, @Body() dto: UpdateCandidateDto) {
     return this.service.update(id, dto);
   }
 

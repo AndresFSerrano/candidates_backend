@@ -27,7 +27,7 @@ describe('CandidatesController', () => {
     }).compile();
 
     controller = module.get(CandidatesController);
-    service = module.get(CandidatesService) as jest.Mocked<CandidatesService>;
+    service = module.get(CandidatesService);
   });
 
   afterEach(() => jest.clearAllMocks());

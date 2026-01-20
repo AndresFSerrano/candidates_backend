@@ -72,7 +72,10 @@ describe('CandidatesService', () => {
       });
 
       await expect(
-        service.create({ name: 'John', surname: 'Doe' } as any, Buffer.from('')),
+        service.create(
+          { name: 'John', surname: 'Doe' } as any,
+          Buffer.from(''),
+        ),
       ).rejects.toThrow(BadRequestException);
     });
   });
